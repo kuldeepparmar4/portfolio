@@ -6,11 +6,15 @@
     <title>Personal Portfolio Website</title>
     <link rel="icon" type="image/png" href="kp-logo.png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   </head>
   <body>
     <header id="header">
       <nav class="navbar">
         <div class="logo">Portfo<span>lio.</span></div>
+
+        <!--  Hamburger -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
 
         <ul class="nav-links" id="nav-links">
           <li><a href="#home">Home</a></li>
@@ -28,14 +32,14 @@
           <h4>Hello, my name is</h4>
           <h1>Kuldeep Parmar</h1>
           <h3>And I'm a <span class="typing"></span></h3>
-          <button class="btn">Hire me</button>
+          <a href="#contact" class="btn">Hire Me</a>
         </div>
       </section>
 
       <section class="about" id="about">
         <div class="about-title">
           <h2>About me</h2>
-          <span>who i am</span>
+          <span>Who I Am</span>
         </div>
 
         <div class="about-container">
@@ -55,8 +59,12 @@
               development. My goal is to build impactful digital solutions that
               solve real-world problems and provide great user experiences.
             </p>
-            <a href="resume.pdf" target="_blank" class="btn">View CV</a>
-            <a href="resume.pdf" download class="btn">Download CV</a>
+            <div class="cv-buttons">
+              <a href="resume.pdf" target="_blank" class="btn">View CV</a>
+              <a href="resume.pdf" download class="btn secondary"
+                >Download CV</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -108,7 +116,7 @@
               quick learner who adapts to new technologies and enjoys solving
               complex problems efficiently.
             </p>
-            <a href="#" class="btn">Read more</a>
+            <a href="#about" class="btn">Read More</a>
           </div>
 
           <!-- Right Skills -->
@@ -185,10 +193,24 @@
               <span class="icon">✉️</span>
               <div>
                 <h4>Email</h4>
-                <p>kuldeepparmarasareta@gmail.com</p>
+                <p>
+                  <a href="mailto:kuldeepparmarasareta@gmail.com">
+                    kuldeepparmarasareta@gmail.com
+                  </a>
+                </p>
               </div>
             </div>
-          </div>
+
+            <div class="info-box">
+              <span class="icon"><i class="fab fa-github"></i>
+              </span>
+              <div>
+                <h4>Github link</h4>
+                <p>
+                  <a href="https://github.com/kuldeepparmar4">GitHub</a>
+                </p>
+              </div>
+            </div>
 
           <!-- Right Form -->
           <div class="contact-form">
@@ -219,7 +241,8 @@
     </main>
     <footer>
       <div class="foot">
-        Created by <span class="footor-Text">Kuldeep Parmar</span>
+        © 2026
+        <span class="footor-Text">Kuldeep Parmar | All Rights Reserved</span>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
