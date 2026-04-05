@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: background-color 0.4s ease;
+}
+#header.scrolled {
+  background: #ff0000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("portfolio-bg.avif"); /* your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: flex-start; /* move content to left */
+  padding-left: 80px; /* space from left like image */
+  text-align: left; /* text aligned left */
+  color: rgb(255, 255, 255);
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1500px;
+}
+
+.hero-content h3 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.typing {
+  color: red;
+  border-right: 2px solid white;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+.btn {
+  background-color: #ff0000;
+  color: #f4f4f4;
+  border-color: #ff0000;
+}
+.about {
+  padding: 80px 100px;
+  background: #fff;
+}
+
+/* Title */
+.about-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-title h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.about-title span {
+  display: block;
+  font-size: 14px;
+  color: red;
+  position: relative;
+  margin-top: 5px;
+}
+
+.about-title span::before,
+.about-title span::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: black;
+  top: 50%;
+}
+
+.about-title span::before {
+  left: -50px;
+}
+
+.about-title span::after {
+  right: -50px;
+}
+
+/* Content Layout */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Image */
+.about-img img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+/* Text */
+.about-content h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.about-content h3 span {
+  color: red;
+}
+
+.about-content p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-right: 15px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: crimson;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.services {
+  background: #111;
+  padding: 80px 100px;
+  color: white;
+}
+
+/* Title */
+.services-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-title h2 {
+  font-size: 36px;
+}
+
+.services-title span {
+  display: inline-block;
+  color: crimson;
+  font-size: 14px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.services-title span::before,
+.services-title span::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: white;
+  top: 50%;
+}
+
+.services-title span::before {
+  left: -50px;
+}
+
+.services-title span::after {
+  right: -50px;
+}
+
+/* Cards Layout */
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card */
+.service-card {
+  background: #222;
+  padding: 40px 25px;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+  transition:
+    transform 0.3s,
+    background 0.3s;
+}
+
+.service-card:hover {
+  background: crimson;
+  transform: translateY(-10px);
+}
+
+/* Icon */
+.service-card .icon {
+  font-size: 40px;
+  color: crimson;
+  margin-bottom: 20px;
+}
+
+.service-card:hover .icon {
+  color: white;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.service-card:hover p {
+  color: white;
+}
+
+.skills {
+  padding: 80px 100px;
+  background: #fff;
+}
+
+/* Title */
+.skills-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills-title h2 {
+  font-size: 36px;
+}
+
+.skills-title span {
+  color: crimson;
+  font-size: 14px;
+  position: relative;
+}
+
+.skills-title span::before,
+.skills-title span::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: black;
+  top: 50%;
+}
+
+.skills-title span::before {
+  left: -50px;
+}
+
+.skills-title span::after {
+  right: -50px;
+}
+
+/* Layout */
+.skills-container {
+  display: flex;
+  gap: 50px;
+}
+
+/* Left Text */
+.skills-text {
+  flex: 1;
+}
+
+.skills-text h3 {
+  margin-bottom: 15px;
+}
+
+.skills-text p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Right Bars */
+.skills-bars {
+  flex: 1;
+}
+
+.bar {
+  margin-bottom: 20px;
+}
+
+.bar .info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.bar .line {
+  height: 5px;
+  background: #ccc;
+  border-radius: 3px;
+  position: relative;
+}
+
+/* Progress Fill */
+.bar .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background: crimson;
+  border-radius: 3px;
+}
+
+/* Individual Skill Widths */
+.line.html::before {
+  width: 90%;
+}
+.line.css::before {
+  width: 85%;
+}
+.line.js::before {
+  width: 80%;
+}
+.line.MERN::before {
+  width: 70%;
+}
+
+.contact {
+  padding: 80px 100px;
+  background: #000000;
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-title h2 {
+  font-size: 36px;
+  color: white;
+}
+
+.contact-title span {
+  color: crimson;
+  font-size: 14px;
+  position: relative;
+}
+
+.contact-title span::before,
+.contact-title span::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  top: 50%;
+}
+
+.contact-title span::before {
+  left: -50px;
+}
+
+.contact-title span::after {
+  right: -50px;
+}
+
+/* Layout */
+.contact-container {
+  display: flex;
+  gap: 60px;
+}
+
+/* Left Info */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.contact-info p {
+  color: #ffffff;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.info-box .icon {
+  font-size: 22px;
+  color: crimson;
+  margin-right: 15px;
+}
+
+/* Right Form */
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* ===== HEADER DEFAULT (TOP / HERO) ===== */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent; /* transparent on hero */
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: white; /* Portfolio text WHITE */
+}
+
+.logo span {
+  color: red; /* dot (.) RED */
+}
+
+/* NAV LINKS */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ===== AFTER SCROLL ===== */
+#header.scrolled {
+  background: red; /* navbar turns RED */
+}
+
+#header.scrolled .logo {
+  color: white; /* Portfolio stays WHITE */
+}
+
+#header.scrolled .logo span {
+  color: white; /* dot becomes WHITE */
+}
+
+#header.scrolled .nav-links a {
+  color: white; /* links stay WHITE */
+}
+
+.foot {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 20px 40px;
+  font-size: large;
+}
+.footor-Text {
+  color: #ff0000;
+}
