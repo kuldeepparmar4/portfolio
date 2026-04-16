@@ -44,7 +44,7 @@ if (typingElement) {
 
 // Initialize EmailJS
 (function () {
-  emailjs.init(CONFIG.EMAILJS_PUBLIC_KEY);
+  emailjs.init("LMELVfqEFvATSjdl-");
 })();
 
 // Form Submit
@@ -53,18 +53,16 @@ document
   .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    emailjs
-      .sendForm(CONFIG.EMAILJS_SERVICE_ID, CONFIG.EMAILJS_TEMPLATE_ID, this)
-      .then(
-        function () {
-          alert("Message Sent Successfully ");
-          document.getElementById("contact-form").reset();
-        },
-        function (error) {
-          alert("Failed to send ");
-          console.log(error);
-        },
-      );
+    emailjs.sendForm("service_kpwebsite1", "template_7h4clx6", this).then(
+      function () {
+        alert("Message Sent Successfully ");
+        document.getElementById("contact-form").reset();
+      },
+      function (error) {
+        alert("Failed to send ");
+        console.log(error);
+      },
+    );
   });
 
 //  Toggle Menu
