@@ -8,7 +8,7 @@ This is my personal portfolio website built to showcase my skills, projects, and
 ---
 
 ##  About Me
-Hi, I'm **Kuldeep Parmar**, a 2nd-year B.Tech student at VIT Bhopal University, pursuing Artificial Intelligence & Machine Learning.
+Hi, I'm **Kuldeep Parmar**, a 3rd-year B.Tech student at VIT Bhopal University, pursuing Artificial Intelligence & Machine Learning.
 
 I am passionate about:
 - Web Development
